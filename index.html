@@ -1,0 +1,80 @@
+<!-- Index for Crystals Game -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Crystals Guessing Game</title>
+
+	<link src="/assets/css/reset.css">
+	<link src="/assets/css/style.css">
+	<!-- Link to bootstrap to make game look nicer -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Added link to the jQuery Library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<!-- Bootstrap Container that will hold everything -->
+	<div class="container">
+		<!-- Jumbotron header/title section -->
+		<div class="jumbotron">
+				<h1>Crystalls Collector! - Icon Edition</h1>
+			<div class="container">
+				<p>You will be given a random number at the start of the game.</p>
+				<p>There are four icons below. By clicking on an icon you will add a specific amount of points to your total score.</p>
+				<p>You win the game by matching the total score to the random number (the game score); you lose the game if your total score goes above the random number (the game score).</p>
+				<p>The value of each icon is hidden from you, but the score will reflect the value of the icon clicked.</p>
+				<p>Each time the game begins, the game will change the values of the icons and the random score.</p>
+				<p id="display-wins">Wins: 0</p>
+				<p id="dipaly-losses">Losses: 0</p>
+			</div>
+		</div>
+		<!-- This container contains the game score, crystal images, and the total score -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<!-- First Panel Contains the Game Score -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h1 class="panel-title"><strong>The game score is: </strong></h1>
+						</div>
+						<div class="panel-body">
+							<p id="display-game-score">00</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<!-- The Second Panel Contains the Total Score -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h1 class="panel-title"><strong>Your total score is: </strong></h1>
+						</div>
+						<div class="panel-body">
+							<p id="display-total-score">00</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- New Row for clickable Crystal images -->
+			<div class="row jumbotron text-center">
+				<div class="col-lg-3">
+					<p>Star Icon: <span id="star-icon" class="glyphicon glyphicon-star"></span></p>
+				</div>
+				<div class="col-lg-3">
+					<p>Flag Icon: <span id="flag-icon" class="glyphicon glyphicon-flag"></span></p>
+				</div>
+				<div class="col-lg-3">
+					<p>Hourglass Icon: <span id="hourglass-icon" class="glyphicon glyphicon-hourglass"></span></p>
+				</div>
+				<div class="col-lg-3">
+					<p>Music Icon: <span id="music-icon" class="glyphicon glyphicon-music"></span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="/assets/javascript/game.js"></script>
+</body>
+</html>
